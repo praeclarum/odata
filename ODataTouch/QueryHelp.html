@@ -1,0 +1,418 @@
+<h1>Filter Help</h1>
+<p>
+    The operators supported in the expression language are shown in the following table.
+</p>
+<table border="1" cellspacing="0">
+    <tr>
+        <th>
+            Operator
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Example
+        </th>
+    </tr>
+    <tr>
+        <th colspan="3">
+            Logical Operators
+        </th>
+    </tr>
+    <tr>
+        <td>
+            Eq
+        </td>
+        <td>
+            Equal
+        </td>
+        <td>
+            City eq 'Redmond'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ne
+        </td>
+        <td>
+            Not equal
+        </td>
+        <td>
+            City ne 'London'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Gt
+        </td>
+        <td>
+            Greater than
+        </td>
+        <td>
+            Price gt 20
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ge
+        </td>
+        <td>
+            Greater than or equal
+        </td>
+        <td>
+            Price ge 10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Lt
+        </td>
+        <td>
+            Less than
+        </td>
+        <td>
+            Price lt 20
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Le
+        </td>
+        <td>
+            Less than or equal
+        </td>
+        <td>
+            Price le 100
+        </td>
+    </tr>
+    <tr>
+        <td>
+            And
+        </td>
+        <td>
+            Logical and
+        </td>
+        <td>
+            Price le 200 and Price gt 3.5
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Or
+        </td>
+        <td>
+            Logical or
+        </td>
+        <td>
+            Price le 3.5 or Price gt 200
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Not
+        </td>
+        <td>
+            Logical negation
+        </td>
+        <td>
+            not endswith(Description,'milk')
+        </td>
+    </tr>
+    <tr>
+        <th colspan="3">
+            Arithmetic Operators
+        </th>
+    </tr>
+    <tr>
+        <td>
+            Add
+        </td>
+        <td>
+            Addition
+        </td>
+        <td>
+            Price add 5 gt 10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Sub
+        </td>
+        <td>
+            Subtraction
+        </td>
+        <td>
+            Price sub 5 gt 10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Mul
+        </td>
+        <td>
+            Multiplication
+        </td>
+        <td>
+            Price mul 2 gt 2000
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Div
+        </td>
+        <td>
+            Division
+        </td>
+        <td>
+            Price div 2 gt 4
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Mod
+        </td>
+        <td>
+            Modulo
+        </td>
+        <td>
+            Price mod 2 eq 0
+        </td>
+    </tr>
+    <tr>
+        <th colspan="3">
+            Grouping Operators
+        </th>
+    </tr>
+    <tr>
+        <td>
+            ( )
+        </td>
+        <td>
+            Precedence grouping
+        </td>
+        <td>
+            (Price sub 5) gt 10
+        </td>
+    </tr>
+</table>
+<p>
+    In addition to operators, a set of functions are also defined for use with the filter query string operator. The following table lists the available functions. Note: ISNULL or COALESCE operators are not defined. Instead, there is a null literal which can be used in comparisons.
+</p>
+<table border="1" cellspacing="0">
+    <tr>
+        <th>
+            Function
+        </th>
+        <th>
+            Example
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2">
+            String Functions
+        </th>
+    </tr>
+    <tr>
+        <td>
+            bool substringof(string po, string p1)
+        </td>
+        <td>
+            substringof('Alfreds', CompanyName)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            bool endswith(string p0, string p1)
+        </td>
+        <td>
+            endswith(CompanyName, 'Futterkiste')
+        </td>
+    </tr>
+    <tr>
+        <td>
+            bool startswith(string p0, string p1)
+        </td>
+        <td>
+            startswith(CompanyName, 'Alfr')
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int length(string p0)
+        </td>
+        <td>
+            length(CompanyName) eq 19
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int indexof(string p0, string p1)
+        </td>
+        <td>
+            indexof(CompanyName, 'lfreds') eq 1
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string replace(string p0, string find, string replace)
+        </td>
+        <td>
+            replace(CompanyName, ' ', '') eq 'AlfredsFutterkiste'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string substring(string p0, int pos)
+        </td>
+        <td>
+            substring(CompanyName, 1) eq 'lfreds Futterkiste'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string substring(string p0, int pos, int length)
+        </td>
+        <td>
+            substring(CompanyName, 1, 2) eq 'lf'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string tolower(string p0)
+        </td>
+        <td>
+            tolower(CompanyName) eq 'alfreds futterkiste'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string toupper(string p0)
+        </td>
+        <td>
+            toupper(CompanyName) eq 'ALFREDS FUTTERKISTE'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string trim(string p0)
+        </td>
+        <td>
+            trim(CompanyName) eq 'Alfreds Futterkiste'
+        </td>
+    </tr>
+    <tr>
+        <td>
+            string concat(string p0, string p1)
+        </td>
+        <td>
+            concat(concat(City, ', '), Country) eq 'Berlin, Germany'
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            Date Functions
+        </th>
+    </tr>
+    <tr>
+        <td>
+            int day(DateTime p0)
+        </td>
+        <td>
+            day(BirthDate) eq 8
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int hour(DateTime p0)
+        </td>
+        <td>
+            hour(BirthDate) eq 0
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int minute(DateTime p0)
+        </td>
+        <td>
+            minute(BirthDate) eq 0
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int month(DateTime p0)
+        </td>
+        <td>
+            month(BirthDate) eq 12
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int second(DateTime p0)
+        </td>
+        <td>
+            second(BirthDate) eq 0
+        </td>
+    </tr>
+    <tr>
+        <td>
+            int year(DateTime p0)
+        </td>
+        <td>
+            year(BirthDate) eq 1948
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            Math Functions
+        </th>
+    </tr>
+    <tr>
+        <td>
+            double round(double p0)
+        </td>
+        <td>
+            round(Freight) eq 32
+        </td>
+    </tr>
+    <tr>
+        <td>
+            double floor(double p0)
+        </td>
+        <td>
+            floor(Freight) eq 32
+        </td>
+    </tr>
+    <tr>
+        <td>
+            double ceiling(double p0)
+        </td>
+        <td>
+            ceiling(Freight) eq 33
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">
+            Type Functions
+        </th>
+    </tr>
+    <tr>
+        <td>
+            bool isof(type typeName)
+        </td>
+        <td>
+            isof('NorthwindModel.Order')
+        </td>
+    </tr>
+    <tr>
+        <td>
+            bool isof(expression p0, type p1)
+        </td>
+        <td>
+            isof(ShipCountry, 'Edm.String')
+        </td>
+    </tr>
+</table>
+<h1>Order Help</h1>
+<p>Order is a comma separated list of properties that sort the query result. Use the suffixes <b>asc</b> and <b>desc</b> to control the order of the sort.</p>
+<p>e.g. <code>EventDate desc</code></p>
+

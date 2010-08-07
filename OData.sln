@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataTouch", "ODataTouch\ODataTouch.csproj", "{952260B4-F4A9-4322-ADFB-883B68A84858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataLib", "ODataLib\ODataLib.csproj", "{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Debug|iPhone.Build.0 = Debug|iPhone
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Release|iPhone.ActiveCfg = Release|iPhone
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Release|iPhone.Build.0 = Release|iPhone
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Debug|iPhone.Build.0 = Debug|iPhone
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Release|iPhone.ActiveCfg = Release|iPhone
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Release|iPhone.Build.0 = Release|iPhone
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{952260B4-F4A9-4322-ADFB-883B68A84858}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ODataTouch\ODataTouch.csproj
+	EndGlobalSection
+EndGlobal

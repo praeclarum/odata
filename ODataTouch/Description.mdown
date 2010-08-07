@@ -1,0 +1,25 @@
+OData Browser enables you to query and browse any OData source. Whether you're a developer or an uber geek who wants access to raw data, this app is for you.
+
+It comes with the following sources already configured:
+
+* Netflix - A huge database of movies and TV shows
+* Open Government Initiative - Access to tons of data published by various US government branches
+* Vancouver Data Service - Huge database that lists everything from parking lots to drinking fountains
+* Nerd Dinner - A social site to meet other nerds
+* Stack Overflow, Super User, and Server Fault - Expert answers for your IT needs
+
+Anything else! If you use Sharepoint 2010, IBM WebSphere, Microsoft Azure, then you can use this app to browse that data.
+
+The app features:
+
+* Support for data relationship following
+* Built-in map if any of the data specifies a longitude and latitude
+* Built-in browser to navigate URLs and view HTML
+* Query editor that lists all properties for feeds
+
+Use this app to query your own data or to learn about OData.
+
+There is a vast amount of data available today and data is now being collected and stored at a rate never seen before. Much, if not most, of this data however is locked into specific applications or formats and difficult to access or to integrate into new uses. The Open Data Protocol (OData) is a Web protocol for querying and updating data that provides a way to unlock your data and free it from silos that exist in applications today.
+
+odata,data,database,wcf,net,sharepoint,schema,metadata,relational,websphere,transparency,azure,sql
+

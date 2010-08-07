@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{952260B4-F4A9-4322-ADFB-883B68A84858}</ProjectGuid>
+    <ProjectTypeGuids>{E613F3A2-FE9C-494F-B74E-F63BCB86FEA6};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OData.Touch</RootNamespace>
+    <MainNibFileIPad>MainWindowIPad.xib</MainNibFileIPad>
+    <MainNibFile>MainWindowIPhone.xib</MainNibFile>
+    <AssemblyName>ODataTouch</AssemblyName>
+    <MtouchMinimumOS>3.0</MtouchMinimumOS>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <BundleIdentifier>com.kruegersystems.odata</BundleIdentifier>
+    <BundleVersion>1.0</BundleVersion>
+    <BundleDisplayName>OData</BundleDisplayName>
+    <BundleIcon>Icon.png</BundleIcon>
+    <BundleIconHigh>Icon4.png</BundleIconHigh>
+    <BundleIconSpotlight>IconSpotlight.png</BundleIconSpotlight>
+    <BundleIconSpotlightHigh>IconSpotlight4.png</BundleIconSpotlightHigh>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>True</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n />
+    <MtouchSdkVersion>4.0</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>False</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchSdkVersion>3.2</MtouchSdkVersion>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>True</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchSdkVersion>4.0</MtouchSdkVersion>
+    <MtouchI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>False</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Krueger Systems, Inc.</CodesignKey>
+    <CodesignProvision>DCBC9B54-EA46-427B-B935-CAA4050F7AFC</CodesignProvision>
+    <MtouchSdkVersion>4.0</MtouchSdkVersion>
+    <MtouchI18n />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindowIPhone.xib.designer.cs">
+      <DependentUpon>MainWindowIPhone.xib</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowIPad.xib.designer.cs">
+      <DependentUpon>MainWindowIPad.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegateIPhone.cs" />
+    <Compile Include="AppDelegateIPad.cs" />
+    <Compile Include="ServicesController.cs" />
+    <Compile Include="Repo.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="ServiceController.cs" />
+    <Compile Include="Dialog.cs" />
+    <Compile Include="UserQuery.cs" />
+    <Compile Include="UserFeed.cs" />
+    <Compile Include="DataViewController.cs" />
+    <Compile Include="BrowserController.cs" />
+    <Compile Include="MapController.cs" />
+    <Compile Include="AddController.cs" />
+    <Compile Include="NetErrorAlert.cs" />
+    <Compile Include="QueryController.cs" />
+    <Compile Include="FeedsController.cs" />
+    <Compile Include="UserMetadataDocument.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindowIPhone.xib" />
+    <Page Include="MainWindowIPad.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties InternalTargetFrameworkVersion="IPhone" />
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\ODataLib\ODataLib.csproj">
+      <Project>{5CBD8CB7-67C6-460A-9C65-4DCCEFFC0C26}</Project>
+      <Name>ODataLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QueryHelp.html" />
+    <Content Include="Icon.png" />
+    <Content Include="Icon4.png" />
+    <Content Include="IconSpotlight.png" />
+    <Content Include="IconSpotlight4.png" />
+    <Content Include="Default.png" />
+    <Content Include="Default%402x.png" />
+  </ItemGroup>
+</Project>
